@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title="Contact | Degin Studios"
+  description="Contact Degin Studios for Infini Jumper support, privacy questions and bug reports."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="content-page legal-copy">
+      <p class="eyebrow">Contact</p>
+      <h1>Contact</h1>
+
+      <p>
+        For support, privacy questions, bug reports or questions about Infini Jumper,
+        you can contact Degin Studios by email.
+      </p>
+
+      <p>
+        <strong>Support email:</strong> <a href="mailto:support@deginstudios.com">support@deginstudios.com</a>
+      </p>
+
+      <p>
+        Please include your device type, operating system, game version and a short
+        description of the issue if you are reporting a bug.
+      </p>
+
+      <h2>Developer</h2>
+      <p>
+        Degin Studios<br />
+        Owner: Miguel Degin
+      </p>
+    </section>
+  </main>
+</BaseLayout>

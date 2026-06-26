@@ -478,6 +478,7 @@ p {
 
 .content-page {
   max-width: 860px;
+  margin: 0 auto;
   padding: clamp(28px, 5vw, 56px);
 }
 

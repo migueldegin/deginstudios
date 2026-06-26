@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title="Terms of Service | Degin Studios"
+  description="Terms of Service for Infini Jumper by Degin Studios."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="content-page legal-copy">
+      <p class="eyebrow">Terms</p>
+      <h1>Terms of Service</h1>
+      <p><strong>Last updated:</strong> June 26, 2026</p>
+
+      <h2>1. Introduction</h2>
+      <p>
+        These Terms of Service apply to the mobile game <strong>Infini Jumper</strong>,
+        published by Degin Studios, owned by Miguel Degin.
+      </p>
+
+      <h2>2. Use of the game</h2>
+      <p>
+        You may use Infini Jumper for personal, non-commercial entertainment purposes.
+        You may not misuse the game, attempt to cheat, modify game data, exploit bugs,
+        reverse engineer the game, or interfere with our services.
+      </p>
+
+      <h2>3. Virtual currency and items</h2>
+      <p>
+        Infini Jumper may include virtual currencies, such as coins and gems, and
+        virtual items. These have no real-world monetary value and cannot be exchanged
+        for cash.
+      </p>
+
+      <h2>4. In-app purchases</h2>
+      <p>
+        Optional in-app purchases may be available through Google Play or the Apple
+        App Store. All purchases are handled by the respective store provider and are
+        subject to their payment terms.
+      </p>
+
+      <p>
+        Consumable virtual items, such as gems, are generally final once delivered,
+        except where refunds are required by law or by the policies of Google Play or
+        the Apple App Store.
+      </p>
+
+      <h2>5. Ads and rewards</h2>
+      <p>
+        The game may show rewarded ads and interstitial ads. Rewards from ads are only
+        granted when the ad provider confirms successful completion.
+      </p>
+
+      <h2>6. Availability</h2>
+      <p>
+        We try to keep Infini Jumper available and working, but we cannot guarantee
+        uninterrupted or error-free operation. Features may change, be limited or be
+        removed over time.
+      </p>
+
+      <h2>7. Fair play</h2>
+      <p>
+        We may restrict access, reset progress or remove virtual currency if we detect
+        cheating, fraud, abuse, technical manipulation or unauthorized access.
+      </p>
+
+      <h2>8. Intellectual property</h2>
+      <p>
+        Infini Jumper, including its name, gameplay, code, design, graphics and other
+        content, is owned by Degin Studios or its licensors. You may not copy, sell,
+        distribute or modify the game without permission.
+      </p>
+
+      <h2>9. Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, Degin Studios is not liable for indirect
+        damages, loss of progress, loss of virtual items, device issues or service
+        interruptions.
+      </p>
+
+      <h2>10. Changes to these terms</h2>
+      <p>
+        We may update these Terms of Service from time to time. The latest version will
+        be posted on this page.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        Degin Studios<br />
+        Owner: Miguel Degin<br />
+        Email: <a href="mailto:support@deginstudios.com">support@deginstudios.com</a>
+      </p>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title="Impressum | Degin Studios"
+  description="Impressum and legal provider information for Degin Studios."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="content-page legal-copy">
+      <p class="eyebrow">Legal notice</p>
+      <h1>Impressum</h1>
+
+      <h2>Angaben gemaess § 5 DDG</h2>
+      <p>
+        Degin Studios<br />
+        Owner: Miguel Degin
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>
+        Email: <a href="mailto:support@deginstudios.com">support@deginstudios.com</a>
+      </p>
+
+      <h2>Verantwortlich fuer den Inhalt</h2>
+      <p>
+        Miguel Degin<br />
+        Degin Studios
+      </p>
+    </section>
+  </main>
+</BaseLayout>
