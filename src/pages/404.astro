@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout title="Page Not Found | Degin Studios">
+  <main class="page-shell">
+    <section class="content-page">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p>The page you were looking for is not here.</p>
+      <a class="button primary" href={withBase()}>Go home</a>
+    </section>
+  </main>
+</BaseLayout>

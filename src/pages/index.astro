@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+const heroImage = withBase('images/infini-jumper-hero.png');
+---
+
+<BaseLayout
+  title="Degin Studios | Mobile Hypercasual Games"
+  description="Degin Studios is an independent mobile game studio preparing its first hypercasual release for players worldwide."
+>
+  <header class="site-header">
+    <a class="brand" href={withBase()} aria-label="Degin Studios home">
+      <span class="brand-mark">D</span>
+      <span>Degin Studios</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#game">Game</a>
+      <a href="#studio">Studio</a>
+      <a href="#press">Press</a>
+      <a href={withBase('support/')}>Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent mobile game studio</p>
+        <h1>Degin Studios</h1>
+        <p class="hero-lede">
+          Building fast, polished hypercasual games with clean mechanics,
+          bright feedback, and the kind of one-more-try energy that belongs on a phone.
+        </p>
+        <div class="hero-actions" aria-label="Main actions">
+          <a class="button primary" href="#game">First game</a>
+          <a class="button secondary" href={withBase('press/')}>Press kit</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Upcoming mobile game preview">
+        <img src={heroImage} alt="Stylized mobile hypercasual game world with floating platforms and collectibles" />
+        <div class="phone-shell" aria-hidden="true">
+          <div class="phone-screen">
+            <span class="score">1280</span>
+            <span class="player"></span>
+            <span class="platform one"></span>
+            <span class="platform two"></span>
+            <span class="platform three"></span>
+            <span class="gem a"></span>
+            <span class="gem b"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="game" class="section split-section">
+      <div>
+        <p class="eyebrow">First release</p>
+        <h2>Infini Jumper</h2>
+        <p>
+          A mobile hypercasual game about timing clean jumps, chasing flow,
+          and climbing as far as your reflexes can carry you. Designed for
+          quick sessions, simple controls, and satisfying score progression.
+        </p>
+      </div>
+      <div class="feature-list" aria-label="Game highlights">
+        <article>
+          <span>01</span>
+          <h3>Instant play</h3>
+          <p>Tap-first controls, fast restarts, and no heavy onboarding.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Clean progression</h3>
+          <p>Scores, milestones, and cosmetic unlock ideas ready for launch.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Mobile first</h3>
+          <p>Built around short sessions, readable feedback, and portrait play.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="studio" class="section studio-band">
+      <div>
+        <p class="eyebrow">About the studio</p>
+        <h2>Small studio. Sharp games.</h2>
+      </div>
+      <p>
+        Degin Studios is focused on accessible mobile games that feel smooth from
+        the first tap. The goal is simple: create compact experiences with strong
+        mechanics, a clear visual identity, and enough polish to stand next to the
+        games players already keep on their home screens.
+      </p>
+    </section>
+
+    <section id="press" class="section press-section">
+      <div>
+        <p class="eyebrow">Launch ready</p>
+        <h2>Follow the first release.</h2>
+        <p>
+          Store links, screenshots, trailers, and the final press kit can live here
+          as soon as Infini Jumper is ready for public release.
+        </p>
+      </div>
+      <div class="cta-panel">
+        <p class="status-pill">Coming soon</p>
+        <h3>Infini Jumper</h3>
+        <p>First mobile hypercasual title from Degin Studios.</p>
+        <div class="store-row" aria-label="Store availability">
+          <span>App Store</span>
+          <span>Google Play</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 Degin Studios</span>
+    <nav aria-label="Footer navigation">
+      <a href={withBase('support/')}>Support</a>
+      <a href={withBase('privacy/')}>Privacy</a>
+      <a href={withBase('press/')}>Press</a>
+    </nav>
+  </footer>
+</BaseLayout>

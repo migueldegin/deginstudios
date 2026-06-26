@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+const heroImage = withBase('images/infini-jumper-hero.png');
+---
+
+<BaseLayout
+  title="Press Kit | Degin Studios"
+  description="Press information for Degin Studios and its first mobile game, Infini Jumper."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="press-hero">
+      <div>
+        <p class="eyebrow">Press kit</p>
+        <h1>Degin Studios</h1>
+        <p>
+          Independent mobile game studio preparing its first hypercasual release,
+          Infini Jumper.
+        </p>
+      </div>
+      <img src={heroImage} alt="Infini Jumper promotional artwork" />
+    </section>
+
+    <section class="content-grid">
+      <article>
+        <h2>Studio</h2>
+        <p>Degin Studios creates polished mobile hypercasual games for quick, satisfying play sessions.</p>
+      </article>
+      <article>
+        <h2>First game</h2>
+        <p>Infini Jumper is currently in development and planned as the studio's first mobile release.</p>
+      </article>
+      <article>
+        <h2>Contact</h2>
+        <p><a href="mailto:hello@deginstudios.com">hello@deginstudios.com</a></p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

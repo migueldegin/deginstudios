@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title="Support | Degin Studios"
+  description="Get support for Degin Studios mobile games."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="content-page">
+      <p class="eyebrow">Support</p>
+      <h1>Game support</h1>
+      <p>
+        Need help with a Degin Studios game, want to report a bug, or have launch
+        feedback for Infini Jumper? Send a short message with your device model,
+        operating system version, and what happened.
+      </p>
+      <a class="button primary" href="mailto:hello@deginstudios.com">hello@deginstudios.com</a>
+    </section>
+
+    <section class="content-grid">
+      <article>
+        <h2>Bug reports</h2>
+        <p>Include steps to reproduce the issue, screenshots if useful, and your game version.</p>
+      </article>
+      <article>
+        <h2>Privacy requests</h2>
+        <p>For data or privacy questions, include the game name and your platform.</p>
+      </article>
+    </section>
+  </main>
+</BaseLayout>

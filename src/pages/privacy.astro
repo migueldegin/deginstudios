@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
+---
+
+<BaseLayout
+  title="Privacy Policy | Degin Studios"
+  description="Privacy information for Degin Studios games and websites."
+>
+  <main class="page-shell">
+    <a class="back-link" href={withBase()}>Back to Degin Studios</a>
+    <section class="content-page legal-copy">
+      <p class="eyebrow">Privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: June 26, 2026</p>
+      <p>
+        Degin Studios builds mobile games and this website. This policy explains
+        the basic privacy approach for visitors and players.
+      </p>
+
+      <h2>Website</h2>
+      <p>
+        This static website is hosted through GitHub Pages. Degin Studios does not
+        run its own analytics or account system on this website.
+      </p>
+
+      <h2>Games</h2>
+      <p>
+        Mobile games may use platform services such as app stores, crash reporting,
+        ads, or analytics. Exact providers and data practices will be listed here
+        before public release.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For privacy questions, contact <a href="mailto:hello@deginstudios.com">hello@deginstudios.com</a>.
+      </p>
+    </section>
+  </main>
+</BaseLayout>
