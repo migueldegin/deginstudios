@@ -10,6 +10,17 @@ const {
 const withBase = (path = '') => `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${path.replace(/^\//, '')}`;
 const previewImage = image ?? withBase('images/infini-jumper-hero.png');
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Degin Studios',
+  url: Astro.site?.toString(),
+  publisher: {
+    '@type': 'Organization',
+    name: 'Degin Studios',
+    url: Astro.site?.toString()
+  }
+};
 ---
 
 <!doctype html>
@@ -17,6 +28,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#090d14" />
     <meta property="og:type" content="website" />
@@ -28,6 +40,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase('favicon.svg')} type="image/svg+xml" />
     <link rel="alternate icon" href={withBase('favicon.ico')} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <title>{title}</title>
   </head>
   <body>
